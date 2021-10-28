@@ -1,0 +1,8 @@
+spring:
+  thymeleaf:
+    cache: false
+
+currency-layer:
+  client:
+    host: http://api.currencylayer.com
+    access-key: aafb56860e3d99d6ab49a9587d08dcff
