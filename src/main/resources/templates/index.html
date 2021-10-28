@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="ko">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WireBarley Apply Spring</title>
+    <script type="text/javascript" th:src="@{/app.js}"></script>
+</head>
+<body>
+<h2>환율 계산</h2>
+<p>송금국가: 미국(USD)</p>
+<label for="destinationCurrency">수취국가: </label>
+<select name="destinationCurrency" id="destinationCurrency">
+    <option value="KRW">한국(KRW)</option>
+    <option value="JPY">일본(JPY)</option>
+    <option value="PHP">필리핀(PHP)</option>
+</select>
+<p>
+    환율: <span id="exRate">-</span><span id="exRateMisc"></span>
+</p>
+<label>송금액:
+    <input type="number" id="sourceAmount" value="1">
+</label> USD
+<p><input type="button" id="calculateExRate" value="수취금액 계산하기"></p>
+<p>
+    <span id="transactionCalculateResult"></span>
+    <span id="transactionCalculateResultMisc"></span>
+</p>
+<input type="hidden" id="sourceCurrency" value="USD">
+
+</body>
+</html>
